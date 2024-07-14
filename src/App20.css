@@ -1,0 +1,44 @@
+body {
+  background-color: #070a3f;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border: 2px solid #fff;
+}
+.btns {
+  display: flex;
+  width: 50%;
+  margin-top: 20px;
+}
+.btns button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.btns button:hover {
+  background-color: #ff0e0e8f;
+}
+.btns button.active {
+  background-color: #ff0a0a;
+  color: #f6f6f6;
+}
+.display {
+  display: flex;
+  justify-content: start;
+  line-height: 45px;
+  width: 50%;
+  height: 200px;
+  background-color: #333;
+}
