@@ -8,37 +8,42 @@ export default function App13() {
     setStudents((stored) => [...stored, student]);
   };
   return (
-    <>
-      <p>
-        <input
-          type="text"
-          onChange={(e) =>
-            setStudent((stored) => ({ ...stored, name: e.target.value }))
-          }
-          placeholder="Enter your name"
-        />
-      </p>
-      <p>
-        <input
-          type="text"
-          onChange={(e) =>
-            setStudent((stored) => ({ ...stored, age: e.target.value }))
-          }
-          placeholder="Enter your age"
-        />
-      </p>
-      <p>
-        <input
-          type="text"
-          onChange={(e) =>
-            setStudent((stored) => ({ ...stored, city: e.target.value }))
-          }
-          placeholder="Enter your city"
-        />
-      </p>
-      <button type="button" onClick={upload}>
-        Enter
-      </button>
+    <div className="main">
+      <div className="p-container">
+        <p className="">
+          <input
+            type="text"
+            onChange={(e) =>
+              setStudent((stored) => ({ ...stored, name: e.target.value }))
+            }
+            placeholder="Enter your name"
+          />
+        </p>
+        <p className="">
+          <input
+            type="text"
+            className=""
+            onChange={(e) =>
+              setStudent((stored) => ({ ...stored, age: e.target.value }))
+            }
+            placeholder="Enter your age"
+          />
+        </p>
+        <p className="">
+          <input
+            type="text"
+            onChange={(e) =>
+              setStudent((stored) => ({ ...stored, city: e.target.value }))
+            }
+            placeholder="Enter your city"
+          />
+        </p>
+        <p className="">
+          <button type="button" className="btn" onClick={upload}>
+            Enter
+          </button>
+        </p>
+      </div>
       <table border={1}>
         <th color="blue" colSpan={4}>
           Data Table
@@ -59,6 +64,6 @@ export default function App13() {
             </tr>
           ))}
       </table>
-    </>
+    </div>
   );
 }

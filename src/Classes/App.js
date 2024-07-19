@@ -1,6 +1,6 @@
 import "./App.css";
-import Footer from "./footer";
-import Header from "./header";
+import Footer from "../footer";
+import Header from "../header";
 
 function App(props) {
   let flg = props.open;

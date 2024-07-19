@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import "./App13.css";
+import React, { useState, useContext } from "react";
+import "../Classes/App13.css";
+import { UserContext } from "../context";
 
 export default function A01() {
   const [product, setProduct] = useState();
   const [items, SetItems] = useState([]);
+  const { loggedUser } = useContext(UserContext);
   let total = 0;
   items.map((item) => (total += item.price * item.quantity));
   const upload = () => {
@@ -11,7 +13,8 @@ export default function A01() {
   };
   return (
     <div className="main">
-      <div className="container">
+      <h2>Welcome {loggedUser}</h2>
+      <div className="p-container">
         <h1>Products</h1>
         <p>
           <input
@@ -40,7 +43,7 @@ export default function A01() {
             placeholder="Enter Quantity"
           />
         </p>
-        <button type="button" onClick={upload}>
+        <button type="button" onClick={upload} className="btn">
           Enter
         </button>
       </div>

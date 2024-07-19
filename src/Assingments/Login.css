@@ -1,0 +1,36 @@
+.login-container .head,
+.login-container .info {
+  text-align: center;
+  color: mediumslateblue;
+}
+.login-container p {
+  width: 100%;
+  text-align: center;
+}
+.login-container p input {
+  width: 100%;
+  max-width: 400px;
+  padding: 5px 15px;
+  margin: 10px 0;
+}
+.login-container .btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-container .btn {
+  padding: 10px 45px;
+  color: red;
+  font-weight: 700;
+  border: none;
+  background-color: #cacaca;
+  border-radius: 10px;
+  font-family: sans-serif;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.login-container .btn:hover {
+  background-color: red;
+  transform: scale(1.1);
+  color: #fff;
+}
