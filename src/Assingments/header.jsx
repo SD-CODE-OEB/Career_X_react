@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
-import { FaDoorOpen, FaPersonBooth } from "react-icons/fa";
+import { UserContext } from "../context";
+import { FaDoorClosed, FaDoorOpen, FaPersonBooth } from "react-icons/fa";
 import "./header.css";
+import { useContext } from "react";
 
 function Header() {
+  const { flag } = useContext(UserContext);
   return (
     <>
       <nav>
@@ -34,6 +37,19 @@ function Header() {
               Register
             </Link>
           </li>
+          {flag === true ? (
+            <>
+              |
+              <li>
+                <Link to="/logout">
+                  <FaDoorClosed />
+                  Logout
+                </Link>
+              </li>
+            </>
+          ) : (
+            <></>
+          )}
         </ul>
       </nav>
     </>

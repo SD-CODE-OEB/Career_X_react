@@ -5,7 +5,7 @@ import { UserContext } from "../context";
 import "./Login.css";
 
 export default function Login(props) {
-  const { user, setUser, users, loggedUser, setLoggedUser } =
+  const { user, setUser, users, loggedUser, setLoggedUser, setFlag } =
     useContext(UserContext);
   const [res, setRes] = useState();
   const Navigate = useNavigate();
@@ -15,6 +15,7 @@ export default function Login(props) {
     ) {
       setRes("Access Granted");
       setLoggedUser(user.name);
+      setFlag(true);
       console.log(loggedUser);
       setTimeout(Navigate("/app"), 2000);
       // setUsers((prevs) => [...prevs, user]);

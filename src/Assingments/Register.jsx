@@ -1,13 +1,21 @@
 import React, { useState, useContext } from "react";
 import Container from "../Container/Container";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../context";
 
 const Register = (props) => {
   const { user, setUser, users, setUsers } = useContext(UserContext);
+  const Navigate = useNavigate();
+  const [res, setRes] = useState();
   const [errors, setErrors] = useState({});
-
-  const handleSubmit = (e) => {
+  const delay = (data) => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({ success: true, data });
+      }, 2000);
+    });
+  };
+  const handleSubmit = async (e) => {
     const validationErrors = {};
     if (user.name.trim() === "") {
       validationErrors.name = "Name is required";
@@ -27,6 +35,11 @@ const Register = (props) => {
     if (Object.keys(validationErrors).length <= 0) {
       setUsers((prev) => [...prev, user]);
       setErrors({});
+      const response = await delay(user);
+      if (response.success) {
+        setRes("Registration successful!");
+        setTimeout(Navigate("/login"), 1000);
+      }
     } else {
       setErrors(validationErrors);
     }
@@ -35,6 +48,16 @@ const Register = (props) => {
   return (
     <Container className="App11">
       <h1 style={{ textAlign: "center" }}>Sign Up</h1>
+      <p
+        style={{
+          textAlign: "center",
+          fontSize: "18px",
+          margin: "10px 0",
+          fontWeight: "400",
+        }}
+      >
+        <span style={{ fontWeight: "700" }}>{res}</span>
+      </p>
       <div style={{ maxWidth: "400px", margin: "0 auto" }}>
         <label style={{ display: "block", marginBottom: "10px" }}>
           Name:

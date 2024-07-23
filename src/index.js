@@ -5,7 +5,6 @@ import { UserContextProvider } from "./context";
 import App22 from "./Assingments/App22";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(<App open={false} />);
 root.render(
   <UserContextProvider>
     <App22 />
