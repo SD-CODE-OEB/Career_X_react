@@ -38,7 +38,7 @@ const Register = (props) => {
       const response = await delay(user);
       if (response.success) {
         setRes("Registration successful!");
-        setTimeout(Navigate("/login"), 1000);
+        setTimeout(Navigate("/login"), 2000);
       }
     } else {
       setErrors(validationErrors);
@@ -47,7 +47,16 @@ const Register = (props) => {
 
   return (
     <Container className="App11">
-      <h1 style={{ textAlign: "center" }}>Sign Up</h1>
+      <h1
+        style={{
+          textAlign: "center",
+          fontSize: "3rem",
+          color: "ButtonShadow",
+          textDecoration: "double underline",
+        }}
+      >
+        Sign Up
+      </h1>
       <p
         style={{
           textAlign: "center",
@@ -60,40 +69,53 @@ const Register = (props) => {
       </p>
       <div style={{ maxWidth: "400px", margin: "0 auto" }}>
         <label style={{ display: "block", marginBottom: "10px" }}>
-          Name:
+          Name
           <input
             type="text"
             // value={user.name}
             onChange={(e) =>
               setUser((prev) => ({ ...prev, name: e.target.value }))
             }
-            style={{ width: "100%", padding: "5px" }}
+            style={{
+              width: "100%",
+              padding: "5px",
+              border: "none",
+              boxShadow: "2px 4px 2px #000",
+            }}
           />
           {errors.name && <span style={{ color: "red" }}>{errors.name}</span>}
         </label>
         <br />
         <label style={{ display: "block", marginBottom: "10px" }}>
-          Email:
+          Email
           <input
             type="email"
             // value={user.email}
             onChange={(e) =>
               setUser((prev) => ({ ...prev, email: e.target.value }))
             }
-            style={{ width: "100%", padding: "5px" }}
+            style={{
+              width: "100%",
+              padding: "5px",
+              boxShadow: "2px 4px 2px #000",
+            }}
           />
           {errors.email && <span style={{ color: "red" }}>{errors.email}</span>}
         </label>
         <br />
         <label style={{ display: "block", marginBottom: "10px" }}>
-          Password:
+          Password
           <input
             type="password"
             // value={user.password}
             onChange={(e) =>
               setUser((prev) => ({ ...prev, password: e.target.value }))
             }
-            style={{ width: "100%", padding: "5px" }}
+            style={{
+              width: "100%",
+              padding: "5px",
+              boxShadow: "2px 4px 2px #000",
+            }}
           />
           {errors.password && (
             <span style={{ color: "red" }}>{errors.password}</span>
@@ -107,6 +129,8 @@ const Register = (props) => {
             backgroundColor: "blue",
             color: "white",
             border: "none",
+            borderRadius: "5px",
+            cursor: "pointer",
           }}
           onClick={handleSubmit}
         >
@@ -115,7 +139,9 @@ const Register = (props) => {
         <p>
           {" "}
           Already a member?
-          <Link to="/login">Sign in</Link>
+          <Link to="/login" style={{ color: "white", padding: "0 5px" }}>
+            Sign in
+          </Link>
         </p>
       </div>
     </Container>

@@ -53,7 +53,10 @@ export default function Login(props) {
         </button>
       </p>
       <p>
-        Create an account &nbsp; <Link to="/register">Sign up</Link>
+        Create an account &nbsp;{" "}
+        <Link className="link" to="/register">
+          Sign up
+        </Link>
       </p>
     </Container>
   );

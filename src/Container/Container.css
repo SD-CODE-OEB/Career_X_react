@@ -3,8 +3,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: "center";
+  background: linear-gradient(45deg, #2196f3, #21cbf3, #2196f3, #21cbf3);
   height: 100%;
   width: 100%;
+  backdrop-filter: drop-shadow(0 0 10px #000);
   padding: 20px;
   margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }

@@ -1,17 +1,23 @@
 .login-container .head,
 .login-container .info {
   text-align: center;
-  color: mediumslateblue;
+  font-size: 3rem;
+  color: #fff;
+  text-decoration: double underline;
 }
 .login-container p {
   width: 100%;
+  margin: 5px 0;
   text-align: center;
 }
 .login-container p input {
   width: 100%;
   max-width: 400px;
   padding: 5px 15px;
+  border: none;
+  box-shadow: 2px 4px 2px #000;
   margin: 10px 0;
+  outline: none;
 }
 .login-container .btn-box {
   display: flex;
@@ -23,7 +29,7 @@
   color: red;
   font-weight: 700;
   border: none;
-  background-color: #cacaca;
+  background-color: black;
   border-radius: 10px;
   font-family: sans-serif;
   transition: all 0.3s ease-in-out;
@@ -33,4 +39,10 @@
   background-color: red;
   transform: scale(1.1);
   color: #fff;
+}
+
+.link {
+  color: white;
+  margin: 5px 0;
+  text-decoration: underline;
 }
