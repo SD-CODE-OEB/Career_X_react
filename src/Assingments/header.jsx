@@ -24,19 +24,25 @@ function Header() {
           </li>
         </ul>
         <ul>
-          <li>
-            <Link to="/login">
-              <FaPersonBooth />
-              Login
-            </Link>
-          </li>{" "}
-          |{" "}
-          <li>
-            <Link to="/register">
-              <FaDoorOpen />
-              Register
-            </Link>
-          </li>
+          {flag === false ? (
+            <>
+              <li>
+                <Link to="/login">
+                  <FaPersonBooth />
+                  Login
+                </Link>
+              </li>
+              |
+              <li>
+                <Link to="/register">
+                  <FaDoorOpen />
+                  Register
+                </Link>
+              </li>
+            </>
+          ) : (
+            <></>
+          )}
           {flag === true ? (
             <>
               |

@@ -4,6 +4,10 @@ export const UserContext = createContext(null);
 export const UserContextProvider = (props) => {
   const [user, setUser] = useState({});
   const [loggedUser, setLoggedUser] = useState("");
+  // const [userContent, setUserContent] = useState({
+  //   username: [{ name: "ball", price: 100, quantity: 1 }],
+  // });
+  // setUserContent({ ...userContent, username: [...userContent.username] });
   const [flag, setFlag] = useState(false);
   const [users, setUsers] = useState([]);
 

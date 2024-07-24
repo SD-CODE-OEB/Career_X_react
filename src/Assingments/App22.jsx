@@ -16,6 +16,7 @@ const App22 = () => {
       <Router>
         <Header />
         <Routes>
+          {/* <Route path="/" element={<App22 />} /> */}
           <Route path="/about" element={<App13 />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
